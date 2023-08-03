@@ -7,7 +7,7 @@
     --skin-color:#ec1839;
 }
 body{
-    line-height: 1.5;
+    line-height: 1.5; 
     font-size: 16px;
     font-family: sans-serif;
 }
@@ -22,13 +22,12 @@ body{
     background: var(--bg-black-900);
     min-height: 100vh;
     display: block;
-    position: fixed;
     padding: 0 30px;
-    left: 270px;
-    top: 0;
-    right: 0;
     z-index: 0;
     opacity: 1;
+}
+.main-content{
+    padding-left: 270px;
 }
 .padd-15{
     padding-left: 15px;
@@ -113,7 +112,7 @@ a{
 }
 .aside .logo a span{
     font-family: cursive;
-    font-family: 40px;
+    font-size: 40px;
 }
 .aside .logo a::before{
     content: '';
@@ -233,6 +232,117 @@ h3 .my-profession{
       text-align: center;
     position: relative;
 }
-.home  .home-img img{
-  height: 400px;
+.home-img::after{
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    right: -20px;
+    bottom: -40px;
+    border-bottom: 10px solid var(--skin-color);
+    border-right: 10px solid var(--skin-color);
 }
+.hidden{
+    display: none !important;
+}
+.home-img::before{
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    left: -20px;
+    top: -40px;
+    border-top: 10px solid var(--skin-color);
+    border-left: 10px solid var(--skin-color);
+}
+
+.home  .home-img img{
+    margin: auto;
+    border-radius: 5px;
+  height: 400px;
+  text-align: center;
+  position: relative;
+}
+.container{
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+}
+
+.section .container{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.section-title{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 60px ;
+}
+
+.section-title h2{
+    font-size: 40px;
+    color: var(--text-black-900);
+    font-weight: 700;
+    position: relative;
+}
+.section-title h2::before{
+  content: '';
+  height: 4px;
+  width: 50px;
+  background-color: var(--skin-color);
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.section-title h2::after{
+    content: '';
+    height: 4px;
+    width: 25px;
+    background-color: var(--skin-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+  }
+  .about .about-content{
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .about .about-content .about-text{
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+   
+  .about .about-content .about-text h3{
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: var(--text-black-900);
+  }
+  .about .about-content .about-text h3 span{
+    color: var(--skin-color);
+  }
+  .about .about-content .about-text p{
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--text-black-700);
+  }
+
+.ro{
+    display: flex;
+}
+
+.about .about-content .personal-info
+{
+    flex: 0 0 60%;
+    max-width: 60%;
+    margin-top: 40px;
+}
+.about .about-content .skills{
+    flex: 0 0 40%;
+    max-width: 40%;
+    margin-top: 40px;
+
+}
+ 
